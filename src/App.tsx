@@ -13,7 +13,7 @@ const App = () => {
 	} = useTheme()
 
 	return (
-		<div className={classNames('app', {}, [theme, 'css'])}>
+		<div className={classNames('app', {}, [theme])}>
 			<button onClick={toggleTheme}>Переключить тему</button>
 			<Link to="/main">MainPage</Link>
 			<Link to="/about">AboutPage</Link>
