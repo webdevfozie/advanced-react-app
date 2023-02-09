@@ -19,8 +19,8 @@ export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
 					modules: {
 						auto: (resPath: string) => Boolean(resPath.includes('.module.')),
 						localIdentName: isDev
-							? '[path][name]__[local]--[hash:base64:8]'
-							: '[hash:base64:8]'
+						                ? '[path][name]__[local]--[hash:base64:8]'
+						                : '[hash:base64:8]'
 					}
 				}
 			},
@@ -28,7 +28,24 @@ export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
 		]
 	}
 
+	const svgLoader = {
+		test: /\.svg$/i,
+		issuer: /\.[jt]sx?$/,
+		use: ['@svgr/webpack']
+	}
+
+	const fileLoader = {
+		test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+		use: [
+			{
+				loader: 'file-loader'
+			}
+		]
+	}
+
 	return [
+		svgLoader,
+		fileLoader,
 		typescriptLoader,
 		scssLoader
 	]
