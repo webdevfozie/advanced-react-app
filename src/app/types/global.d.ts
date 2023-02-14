@@ -1,15 +1,17 @@
 declare module '*.scss' {
-	interface IClassNames {
-		[className: string]: string
-	}
+  interface IClassNames {
+    [className: string]: string
+  }
 
-	const classNames: IClassNames
-	export = classNames;
+  const classNames: IClassNames
+  export = classNames;
 }
 
 declare module '*.svg' {
-	const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>
-	export default content
+  import React from 'react'
+
+  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>
+  export default content
 }
 
 declare module '*.png'
