@@ -48,6 +48,9 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
+    indent: 'off',
+    '@typescript-eslint/indent': ['error', 2],
   },
   globals: {
     __IS_DEV__: true,
