@@ -2,5 +2,7 @@
   "Главная страница": "Main",
   "О нас": "About us",
   "Язык": "English",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Обновить страницу": "Reload page",
+  "Произошла ошибка!": "An error has occurred!"
 }
