@@ -3,6 +3,7 @@ import {
   DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPluginInstance,
 } from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { BuildOptions } from './types/config'
 
 export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
@@ -20,5 +21,8 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
       __IS_DEV__: JSON.stringify(isDev),
     }),
     new HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
   ]
 }
