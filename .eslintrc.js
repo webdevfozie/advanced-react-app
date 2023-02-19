@@ -9,7 +9,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:i18next/recommended',
   ],
-  overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -47,7 +46,7 @@ module.exports = {
     'react/jsx-uses-react': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
     'max-len': ['error', { ignoreComments: true, code: 120 }],
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
@@ -55,4 +54,12 @@ module.exports = {
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 }
