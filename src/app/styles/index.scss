@@ -3,7 +3,7 @@
 @import "./themes/light";
 @import "./themes/dark";
 
-body {
+.app {
   font: var(--font-m);
   background: var(--background-color);
   color: var(--primary-color);
