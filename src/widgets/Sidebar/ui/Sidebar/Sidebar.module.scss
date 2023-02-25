@@ -4,17 +4,64 @@
   background-color: var(--inverted-background-color);
   position: relative;
   transition: width 300ms;
-
-  &.collapsed {
-    width: var(--sidebar-width-collapsed);
-  }
 }
 
 .switchers {
   position: absolute;
-  bottom: 20px;
+  bottom: 48px;
   display: flex;
   gap: 16px;
   justify-content: center;
+  align-items: center;
   width: 100%;
+}
+
+.collapse-button {
+  position: absolute;
+  right: -16px;
+  bottom: 8px;
+  border: 2px solid var(--inverted-background-color);
+  z-index: 1;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .link {
+    padding: 0 16px;
+    display: flex;
+    gap: 6px;
+
+    i {
+      transition: font-size 300ms;
+    }
+
+    span {
+      white-space: nowrap;
+      transition: opacity 300ms;
+    }
+  }
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+
+  .switchers {
+    flex-direction: column;
+  }
+
+  .link {
+    text-align: center;
+
+    i {
+      font: var(--font-l);
+    }
+
+    span {
+      opacity: 0;
+      width: 0;
+    }
+  }
 }

@@ -1,3 +1,7 @@
 .langSwitcher {
   color: var(--inverted-primary-color);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
 }
