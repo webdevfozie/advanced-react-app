@@ -60,9 +60,9 @@
         <line num="8" count="5" type="stmt"/>
       </file>
     </package>
-    <package name="src.shared.lib.testing.renderWithTranslation">
+    <package name="src.shared.lib.testing.componentRender">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="renderWithTranslation.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/lib/testing/renderWithTranslation/renderWithTranslation.tsx">
+      <file name="componentRender.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/lib/testing/componentRender/componentRender.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="7" count="2" type="stmt"/>
       </file>

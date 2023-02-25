@@ -103,11 +103,11 @@ BRF:2
 BRH:2
 end_of_record
 TN:
-SF:src/shared/lib/testing/renderWithTranslation/renderWithTranslation.tsx
-FN:6,renderWithTranslation
+SF:src/shared/lib/testing/componentRender/componentRender.tsx
+FN:6,componentRender
 FNF:1
 FNH:1
-FNDA:2,renderWithTranslation
+FNDA:2,componentRender
 DA:7,2
 LF:1
 LH:1
