@@ -17,7 +17,12 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+  ],
   settings: {
     'import/resolver': {
       node: {
@@ -55,6 +60,14 @@ module.exports = {
     }],
     indent: 'off',
     '@typescript-eslint/indent': ['error', 2],
+    'react/self-closing-comp': ['error', {
+      component: true,
+      html: false,
+    }],
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,

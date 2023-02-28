@@ -2,6 +2,7 @@
   cursor: pointer;
   color: var(--primary-color);
   padding: 6px 10px;
+  transition: all 0.2s ease-in-out;
 
   &.clear {
     margin: 0;
@@ -15,6 +16,26 @@
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     background: none;
+
+    &:hover {
+      opacity: 1;
+      border: 1px solid var(--primary-color);
+      color: var(--background-color);
+      background: var(--primary-color);
+    }
+  }
+
+  &.outline-inverted {
+    border: 1px solid var(--inverted-primary-color);
+    color: var(--inverted-primary-color);
+    background: none;
+
+    &:hover {
+      opacity: 1;
+      border: 1px solid var(--inverted-primary-color);
+      color: var(--inverted-background-color);
+      background: var(--inverted-primary-color);
+    }
   }
 
   &.background {
