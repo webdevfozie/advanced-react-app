@@ -1,115 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676817250306" clover="3.2.0">
-  <project timestamp="1676817250306" name="All files">
-    <metrics statements="35" coveredstatements="27" conditionals="10" coveredconditionals="5" methods="16" coveredmethods="12" elements="61" coveredelements="44" complexity="0" loc="35" ncloc="35" packages="12" files="13" classes="13"/>
-    <package name="config.jest">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="jestEmptyComponent.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/config/jest/jestEmptyComponent.tsx">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="3" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.app.providers.ThemeProvider">
+<coverage generated="1678011306439" clover="3.2.0">
+  <project timestamp="1678011306439" name="All files">
+    <metrics statements="33" coveredstatements="32" conditionals="6" coveredconditionals="3" methods="15" coveredmethods="14" elements="54" coveredelements="49" complexity="0" loc="33" ncloc="33" packages="13" files="13" classes="13"/>
+    <package name="app.providers.StoreProvider">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/app/providers/ThemeProvider/index.ts">
+      <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/app/providers/StoreProvider/index.ts">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
-    <package name="src.app.providers.ThemeProvider.lib">
-      <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="ThemeContext.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/app/providers/ThemeProvider/lib/ThemeContext.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+    <package name="app.providers.StoreProvider.config">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="store.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/app/providers/StoreProvider/config/store.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.providers.StoreProvider.ui">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="StoreProvider.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/app/providers/StoreProvider/ui/StoreProvider.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Counter">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Counter/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="entities.Counter.model.selectors.getCounter">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getCounter.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Counter/model/selectors/getCounter/getCounter.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Counter.model.selectors.getCounterValue">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getCounterValue.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Counter.model.slice">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="CounterSlice.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Counter/model/slice/CounterSlice.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-      </file>
-      <file name="useTheme.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/app/providers/ThemeProvider/lib/useTheme.ts">
-        <metrics statements="6" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.app.providers.ThemeProvider.ui">
-      <metrics statements="6" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="0"/>
-      <file name="ThemeProvider.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/app/providers/ThemeProvider/ui/ThemeProvider.tsx">
-        <metrics statements="6" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="0"/>
-        <line num="4" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+    <package name="entities.Counter.ui">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="Counter.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Counter/ui/Counter.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
       </file>
     </package>
-    <package name="src.shared.config.i18n">
+    <package name="shared.config.i18n">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="i18nForTesting.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/config/i18n/i18nForTesting.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.shared.lib.classNames">
-      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+    <package name="shared.lib.classNames">
+      <metrics statements="3" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="classNames.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/lib/classNames/classNames.ts">
-        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="4" count="25" type="stmt"/>
-        <line num="7" count="9" type="stmt"/>
-        <line num="8" count="5" type="stmt"/>
+        <metrics statements="3" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="src.shared.lib.testing.componentRender">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="componentRender.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/lib/testing/componentRender/componentRender.tsx">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="7" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.shared.ui.Button">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Button.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Button/Button.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="20" count="8" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.shared.ui.LangSwitcher">
-      <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="LangSwitcher.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/LangSwitcher/LangSwitcher.tsx">
-        <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="16" count="3" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.shared.ui.ThemeSwitcher">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/ThemeSwitcher/index.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-    </package>
-    <package name="src.shared.ui.ThemeSwitcher.ui">
+    <package name="shared.lib.testing.componentRender">
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="ThemeSwitcher.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/ThemeSwitcher/ui/ThemeSwitcher.tsx">
+      <file name="componentRender.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/lib/testing/componentRender/componentRender.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
+        <line num="14" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="src.widgets.Sidebar.ui.Sidebar">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="Sidebar.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/widgets/Sidebar/ui/Sidebar/Sidebar.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
+    <package name="shared.ui.Button">
+      <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="Button.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Button/Button.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="34" count="10" type="stmt"/>
+        <line num="36" count="10" type="stmt"/>
+        <line num="40" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui.Icon">
+      <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="Icon.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Icon/Icon.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="5" type="stmt"/>
       </file>
     </package>
   </project>
