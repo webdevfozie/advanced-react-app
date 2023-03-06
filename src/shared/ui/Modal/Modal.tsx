@@ -9,7 +9,8 @@ interface ModalProps {
   className?: string,
   children?: ReactNode,
   isOpen?: boolean,
-  onClose: () => void,
+  onClose?: () => void,
+  lazy?: boolean
 }
 
 const ANIMATION_DELAY = 400
@@ -19,11 +20,19 @@ export const Modal = (props: ModalProps) => {
     className,
     children,
     isOpen,
+    lazy,
     onClose,
   } = props
 
   const [isClosing, setIsClosing] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>()
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true)
+    }
+  }, [isOpen])
 
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
@@ -60,6 +69,10 @@ export const Modal = (props: ModalProps) => {
       window.removeEventListener('keyup', onKeyUp)
     }
   }, [isOpen, onKeyUp])
+
+  if (lazy && !isMounted) {
+    return null
+  }
 
   return (
     <Portal>

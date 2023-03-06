@@ -3,6 +3,8 @@
   color: var(--primary-color);
   padding: 6px 10px;
   transition: all 0.2s ease-in-out;
+  border-radius: var(--border-radius-s);
+  border: 1px solid var(--primary-color);
 
   &.clear {
     margin: 0;
