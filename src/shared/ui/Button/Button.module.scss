@@ -5,6 +5,7 @@
   transition: all 0.2s ease-in-out;
   border-radius: var(--border-radius-s);
   border: 1px solid var(--primary-color);
+  position: relative;
 
   &.clear {
     margin: 0;
@@ -84,5 +85,23 @@
 
   &.size-l {
     font: var(--font-l);
+  }
+
+  &::before {
+    content: "🔒";
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+    transition: 300ms;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.6;
+    padding-left: 32px;
+
+    &::before {
+      opacity: 1;
+    }
   }
 }

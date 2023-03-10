@@ -82,3 +82,10 @@ Square.args = {
   theme: ButtonTheme.BACKGROUND_INVERTED,
   square: true,
 }
+
+export const Disabled = Template.bind({})
+Disabled.args = {
+  children: 'Применить',
+  theme: ButtonTheme.OUTLINE,
+  disabled: true,
+}
