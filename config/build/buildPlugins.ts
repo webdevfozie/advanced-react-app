@@ -22,12 +22,11 @@ export function buildPlugins(options: BuildOptions): WebpackPluginInstance[] {
     }),
   ]
 
-  plugins.push(new BundleAnalyzerPlugin({
-    openAnalyzer: false,
-  }))
-
   if (isDev) {
     plugins.push(new HotModuleReplacementPlugin())
+    plugins.push(new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }))
   }
 
   return plugins
