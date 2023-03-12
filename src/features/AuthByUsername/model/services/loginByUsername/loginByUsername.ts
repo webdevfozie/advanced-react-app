@@ -25,7 +25,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, { re
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error)
-      return thunkAPI.rejectWithValue(error.message)
+      return thunkAPI.rejectWithValue('error')
     }
   },
 )
