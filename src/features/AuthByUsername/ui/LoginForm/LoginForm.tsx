@@ -17,6 +17,7 @@ import { loginActions, loginReducer } from '../../model/slice/LoginSlice'
 
 export interface LoginFormProps {
   className?: string,
+  onSuccess: () => void,
 }
 
 const initialReducers: ReducersList = {
@@ -26,6 +27,7 @@ const initialReducers: ReducersList = {
 const LoginForm = memo((props: LoginFormProps) => {
   const {
     className,
+    onSuccess,
   } = props
 
   const { t } = useTranslation()
@@ -43,9 +45,12 @@ const LoginForm = memo((props: LoginFormProps) => {
     dispatch(loginActions.setPassword(value))
   }, [dispatch])
 
-  const onLoginClick = useCallback(() => {
-    dispatch(loginByUsername({ username, password }))
-  }, [dispatch, password, username])
+  const onLoginClick = useCallback(async () => {
+    const result = await dispatch(loginByUsername({ username, password }))
+    if (result.meta.requestStatus === 'fulfilled') {
+      onSuccess()
+    }
+  }, [dispatch, onSuccess, password, username])
 
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>

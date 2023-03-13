@@ -1,5 +1,15 @@
 {
   "users": [
     { "id": "1", "username": "user", "password": "111" }
-  ]
+  ],
+  "profile": {
+    "firstname": "Артем",
+    "lastname": "Фролов",
+    "age": 24,
+    "currency": "KZT",
+    "country": "Kazakhstan",
+    "city": "Almaty",
+    "username": "fozie",
+    "avatar": "https://fs05.gcfiles.net/fileservice/file/thumbnail/h/AB.41f855510adc4048d0300adf24345b73.png/s/70x70/a/550990/sc/131"
+  }
 }

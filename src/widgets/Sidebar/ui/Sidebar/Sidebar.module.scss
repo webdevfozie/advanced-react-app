@@ -28,21 +28,6 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-
-  .link {
-    padding: 0 16px;
-    display: flex;
-    gap: 6px;
-
-    i {
-      transition: font-size 300ms;
-    }
-
-    span {
-      white-space: nowrap;
-      transition: opacity 300ms;
-    }
-  }
 }
 
 .collapsed {
@@ -50,18 +35,5 @@
 
   .switchers {
     flex-direction: column;
-  }
-
-  .link {
-    text-align: center;
-
-    i {
-      font: var(--font-l);
-    }
-
-    span {
-      opacity: 0;
-      width: 0;
-    }
   }
 }
