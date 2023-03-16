@@ -1,7 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Icon } from 'shared/ui/Icon/Icon'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { profileReducer } from 'entities/Profile'
+import { fetchProfileData, ProfileCard, profileReducer } from 'entities/Profile'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useEffect } from 'react'
 import cls from './ProfilePage.module.scss'
 
 interface ProfilePageProps {
@@ -14,11 +15,16 @@ const initialReducers: ReducersList = {
 
 const ProfilePage = (props: ProfilePageProps) => {
   const { className } = props
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProfileData())
+  }, [dispatch])
 
   return (
     <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
       <div className={classNames(cls.profilePage, {}, [className])}>
-        <Icon>Страница профиля</Icon>
+        <ProfileCard />
       </div>
     </DynamicModuleLoader>
   )

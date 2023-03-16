@@ -1,5 +1,5 @@
 import React from 'react'
-import { Args, ComponentMeta, ComponentStory } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 import MainPage from './MainPage'
@@ -12,7 +12,7 @@ export default {
   },
 } as ComponentMeta<typeof MainPage>
 
-const Template: ComponentStory<typeof MainPage> = (args: Args) => <MainPage {...args} />
+const Template: ComponentStory<typeof MainPage> = () => <MainPage />
 
 export const Light = Template.bind({})
 Light.args = {}

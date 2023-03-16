@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit'
 import { StateSchema } from 'app/providers/StoreProvider'
 import { getLoginUsername } from 'features/AuthByUsername/model/selectors/getLoginUsername/getLoginUsername'
 
@@ -7,6 +6,9 @@ describe('getLoginUsername.test', () => {
     const state: DeepPartial<StateSchema> = {
       loginForm: {
         username: 'login',
+        isLoading: false,
+        password: '123',
+        error: undefined,
       },
     }
     expect(getLoginUsername(state as StateSchema)).toEqual('login')

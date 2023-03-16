@@ -36,6 +36,7 @@ WithError.decorators = [StoreDecorator({
   loginForm: {
     username: 'user',
     password: '123',
+    isLoading: false,
     error: 'Ошибка 404',
   },
 })]
