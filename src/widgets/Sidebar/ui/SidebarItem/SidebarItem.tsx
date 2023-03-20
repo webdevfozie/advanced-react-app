@@ -4,6 +4,8 @@ import { Icon } from 'shared/ui/Icon/Icon'
 import { SidebarItemType } from 'widgets/Sidebar/model/Items'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { memo } from 'react'
+import { useSelector } from 'react-redux'
+import { getUserAuthData } from 'entities/User'
 import cls from './SidebarItem.module.scss'
 
 interface SidebarItemProps {
@@ -18,6 +20,12 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
   } = props
 
   const { t } = useTranslation()
+
+  const isAuth = useSelector(getUserAuthData)
+
+  if (item.needAuth && !isAuth) {
+    return null
+  }
 
   return (
     <AppLink

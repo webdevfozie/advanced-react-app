@@ -11,5 +11,7 @@
   "Введите логин": "Enter your username",
   "Введите пароль": "Enter the password",
   "Авторизация": "Authorization",
-  "Выйти": "Выйти"
+  "Выйти": "Logout",
+  "Укажите валюту": "Choose a currency",
+  "Укажите страну": "Choose a country"
 }
