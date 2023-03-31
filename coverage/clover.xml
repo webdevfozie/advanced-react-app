@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678951784968" clover="3.2.0">
-  <project timestamp="1678951784968" name="All files">
-    <metrics statements="160" coveredstatements="120" conditionals="48" coveredconditionals="28" methods="63" coveredmethods="38" elements="271" coveredelements="186" complexity="0" loc="160" ncloc="160" packages="46" files="48" classes="48"/>
+<coverage generated="1680260238856" clover="3.2.0">
+  <project timestamp="1680260238856" name="All files">
+    <metrics statements="292" coveredstatements="194" conditionals="95" coveredconditionals="53" methods="104" coveredmethods="57" elements="491" coveredelements="304" complexity="0" loc="292" ncloc="292" packages="71" files="73" classes="73"/>
     <package name="app.providers.StoreProvider">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/app/providers/StoreProvider/index.ts">
@@ -137,6 +137,215 @@
         <line num="18" count="5" type="stmt"/>
       </file>
     </package>
+    <package name="entities.Country">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Country/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="entities.Country.model.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="country.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Country/model/types/country.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="entities.Country.ui.CountrySelect">
+      <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="CountrySelect.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Country/ui/CountrySelect/CountrySelect.tsx">
+        <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="12" count="35" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Currency">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Currency/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="entities.Currency.model.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="currency.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Currency/model/types/currency.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="entities.Currency.ui.CurrencySelect">
+      <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="CurrencySelect.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Currency/ui/CurrencySelect/CurrencySelect.tsx">
+        <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="12" count="28" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.selectors.getProfileData">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getProfileData.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/selectors/getProfileData/getProfileData.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.selectors.getProfileError">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getProfileError.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/selectors/getProfileError/getProfileError.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.selectors.getProfileForm">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getProfileForm.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/selectors/getProfileForm/getProfileForm.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.selectors.getProfileIsLoading">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getProfileIsLoading.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.selectors.getProfileReadonly">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getProfileReadonly.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.selectors.getProfileValidateErrors">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="getProfileValidateErrors.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/selectors/getProfileValidateErrors/getProfileValidateErrors.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.services.fetchProfileData">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="fetchProfileData.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/services/fetchProfileData/fetchProfileData.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.services.updateProfileData">
+      <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="updateProfileData.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/services/updateProfileData/updateProfileData.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.services.validateProfileData">
+      <metrics statements="18" coveredstatements="15" conditionals="18" coveredconditionals="15" methods="1" coveredmethods="1"/>
+      <file name="validateProfileData.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/services/validateProfileData/validateProfileData.ts">
+        <metrics statements="18" coveredstatements="15" conditionals="18" coveredconditionals="15" methods="1" coveredmethods="1"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="14" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="18" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="22" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="38" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.slice">
+      <metrics statements="26" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="6"/>
+      <file name="ProfileSlice.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/slice/ProfileSlice.ts">
+        <metrics statements="26" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="6"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="65" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="entities.Profile.model.types">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="profile.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/model/types/profile.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="entities.Profile.ui.ProfileCard">
+      <metrics statements="9" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="ProfileCard.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/Profile/ui/ProfileCard/ProfileCard.tsx">
+        <metrics statements="9" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+      </file>
+    </package>
     <package name="entities.User">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/User/index.ts">
@@ -144,10 +353,10 @@
       </file>
     </package>
     <package name="entities.User.model.selectors.getUserAuthData">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getUserAuthData.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="4" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="6" type="stmt"/>
       </file>
     </package>
     <package name="entities.User.model.slice">
@@ -292,6 +501,24 @@
         <line num="5" count="0" type="stmt"/>
       </file>
     </package>
+    <package name="pages.ProfilePage.ui.ProfilePageHeader">
+      <metrics statements="12" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="ProfilePageHeader.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/pages/ProfilePage/ui/ProfilePageHeader/ProfilePageHeader.tsx">
+        <metrics statements="12" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+      </file>
+    </package>
     <package name="shared.api">
       <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="0" coveredmethods="0"/>
       <file name="api.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/api/api.ts">
@@ -310,8 +537,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="routeConfig.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/config/routeConfig/routeConfig.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
     </package>
     <package name="shared.const">
@@ -325,9 +552,9 @@
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
       <file name="classNames.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/lib/classNames/classNames.ts">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="8" count="56" type="stmt"/>
-        <line num="11" count="39" type="stmt"/>
-        <line num="12" count="11" type="stmt"/>
+        <line num="8" count="50" type="stmt"/>
+        <line num="11" count="36" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
       </file>
     </package>
     <package name="shared.lib.hooks.useAppDispatch">
@@ -338,19 +565,19 @@
       </file>
     </package>
     <package name="shared.lib.testing.TestAsyncThunk">
-      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="TestAsyncThunk.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/lib/testing/TestAsyncThunk/TestAsyncThunk.ts">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="32" count="2" type="stmt"/>
-        <line num="33" count="2" type="stmt"/>
-        <line num="37" count="2" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="33" count="7" type="stmt"/>
+        <line num="34" count="7" type="stmt"/>
+        <line num="38" count="7" type="stmt"/>
+        <line num="39" count="7" type="stmt"/>
+        <line num="48" count="7" type="stmt"/>
       </file>
     </package>
     <package name="shared.lib.testing.componentRender">
@@ -367,18 +594,28 @@
       <file name="AppLink.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/AppLink/AppLink.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="24" count="9" type="stmt"/>
-        <line num="26" count="9" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui.Avatar">
+      <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Avatar.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Avatar/Avatar.tsx">
+        <metrics statements="4" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
       </file>
     </package>
     <package name="shared.ui.Button">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="Button.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Button/Button.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="35" count="21" type="stmt"/>
-        <line num="37" count="21" type="stmt"/>
-        <line num="41" count="21" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="36" count="21" type="stmt"/>
+        <line num="38" count="21" type="stmt"/>
+        <line num="42" count="21" type="stmt"/>
       </file>
     </package>
     <package name="shared.ui.Icon">
@@ -386,7 +623,19 @@
       <file name="Icon.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Icon/Icon.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="15" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="20" type="stmt"/>
+        <line num="16" count="17" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui.Input">
+      <metrics statements="6" coveredstatements="1" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="Input.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Input/Input.tsx">
+        <metrics statements="6" coveredstatements="1" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
       </file>
     </package>
     <package name="shared.ui.LangSwitcher">
@@ -398,6 +647,36 @@
         <line num="14" count="3" type="stmt"/>
         <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="19" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui.Loader">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Loader.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Loader/Loader.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui.Select">
+      <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Select.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Select/Select.tsx">
+        <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.ui.Text">
+      <metrics statements="3" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="Text.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/shared/ui/Text/Text.tsx">
+        <metrics statements="3" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
       </file>
     </package>
     <package name="shared.ui.ThemeSwitcher">
@@ -419,7 +698,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="Items.ts" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/widgets/Sidebar/model/Items.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
       </file>
     </package>
     <package name="widgets.Sidebar.ui.Sidebar">
@@ -435,13 +714,16 @@
       </file>
     </package>
     <package name="widgets.Sidebar.ui.SidebarItem">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="SidebarItem.tsx" path="/Users/af.fozie/Work/Learning/advanced-react-app/src/widgets/Sidebar/ui/SidebarItem/SidebarItem.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="18" count="9" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="16" count="1" type="stmt"/>
         <line num="20" count="9" type="stmt"/>
         <line num="22" count="9" type="stmt"/>
+        <line num="24" count="9" type="stmt"/>
+        <line num="26" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
       </file>
     </package>
   </project>

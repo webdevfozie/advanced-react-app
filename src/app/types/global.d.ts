@@ -1,3 +1,5 @@
+type Project = import('../../../config/build/types/config').Project
+
 declare module '*.scss' {
   interface IClassNames {
     [className: string]: string
@@ -8,6 +10,7 @@ declare module '*.scss' {
 }
 
 declare module '*.svg' {
+  // @ts-ignore
   import React from 'react'
 
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>
@@ -20,6 +23,7 @@ declare module '*.jpeg'
 
 declare const __IS_DEV__: boolean
 declare const __API__: string
+declare const __PROJECT__: Project
 
 type DeepPartial<T> = T extends object ? {
   [P in keyof T]?: DeepPartial<T[P]>;

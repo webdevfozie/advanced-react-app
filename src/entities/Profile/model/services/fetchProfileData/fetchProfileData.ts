@@ -12,6 +12,11 @@ export const fetchProfileData = createAsyncThunk<Profile, void, ThunkConfig<stri
     try {
       const { data } = await extra.api.get<Profile>('/profile')
 
+      if (!data) {
+        // noinspection ExceptionCaughtLocallyJS
+        throw new Error()
+      }
+
       return fulfillWithValue(data)
     } catch (error) {
       // eslint-disable-next-line no-console

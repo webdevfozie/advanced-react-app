@@ -4,19 +4,19 @@
  */
 
 import path from 'path'
+import { Project } from '../build/types/config'
+
+const project: Project = 'jest'
 
 export default {
   globals: {
     __IS_DEV__: true,
     __API__: '',
+    __PROJECT__: project,
   },
   clearMocks: true,
   testEnvironment: 'jsdom',
-  collectCoverage: true,
-  coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: [
-    '\\\\node_modules\\\\',
-  ],
+  collectCoverage: false,
   moduleDirectories: [
     'node_modules',
   ],
