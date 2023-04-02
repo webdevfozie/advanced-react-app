@@ -24,4 +24,10 @@ export const SidebarItemsList: SidebarItemType[] = [
     icon: '🪪',
     needAuth: true,
   },
+  {
+    path: RoutePath.articles,
+    text: 'Статьи',
+    icon: '📄',
+    needAuth: true,
+  },
 ]
