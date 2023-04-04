@@ -1,0 +1,27 @@
+import { createAsyncThunk } from '@reduxjs/toolkit'
+import { ThunkConfig } from 'app/providers/StoreProvider'
+import { Article } from '../../types/article'
+
+export const fetchArticleById = createAsyncThunk<Article, string, ThunkConfig<string>>(
+  'articleDetails/fetchArticleById',
+  async (articleId, thunkAPI) => {
+    const {
+      extra, rejectWithValue, fulfillWithValue,
+    } = thunkAPI
+
+    try {
+      const { data } = await extra.api.get<Article>(`/articles/${articleId}`)
+
+      if (!data) {
+        // noinspection ExceptionCaughtLocallyJS
+        throw new Error()
+      }
+
+      return fulfillWithValue(data)
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error(error)
+      return rejectWithValue('error')
+    }
+  },
+)

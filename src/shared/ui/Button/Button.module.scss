@@ -7,6 +7,10 @@
   border: 1px solid var(--primary-color);
   position: relative;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   &.clear {
     margin: 0;
     padding: 0;

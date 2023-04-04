@@ -3,17 +3,17 @@ import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article'
-import ArticleDetailsPage from './ArticleDetailsPage'
+import { ArticleDetails } from './ArticleDetails'
 
 export default {
-  title: 'pages/ArticleDetailsPage',
-  component: ArticleDetailsPage,
+  title: 'entities/ArticleDetails',
+  component: ArticleDetails,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof ArticleDetailsPage>
+} as ComponentMeta<typeof ArticleDetails>
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = () => <ArticleDetailsPage />
+const Template: ComponentStory<typeof ArticleDetails> = () => <ArticleDetails id="1" />
 
 export const Default = Template.bind({})
 Default.args = {}
@@ -88,5 +88,19 @@ Default.decorators = [StoreDecorator({
         },
       ],
     },
+  },
+})]
+export const Loading = Template.bind({})
+Loading.args = {}
+Loading.decorators = [StoreDecorator({
+  articleDetails: {
+    isLoading: true,
+  },
+})]
+export const Error = Template.bind({})
+Error.args = {}
+Error.decorators = [StoreDecorator({
+  articleDetails: {
+    error: 'error',
   },
 })]

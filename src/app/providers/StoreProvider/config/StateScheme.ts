@@ -8,6 +8,7 @@ import { ProfileSchema } from 'entities/Profile'
 import { AxiosInstance } from 'axios'
 import { To } from '@remix-run/router'
 import { NavigateOptions } from 'react-router/dist/lib/context'
+import { ArticleDetailsSchema } from 'entities/Article'
 import { createReduxStore } from './store'
 
 export interface StateSchema {
@@ -17,6 +18,7 @@ export interface StateSchema {
   // Async
   loginForm?: LoginSchema
   profile?: ProfileSchema
+  articleDetails?: ArticleDetailsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

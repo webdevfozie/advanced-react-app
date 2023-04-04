@@ -1,8 +1,15 @@
 :root {
   --primary-color: #005fff;
-  --secondary-color: #e5efff;
+  --secondary-color: #4175e5;
   --background-color: #e5efff;
   --inverted-primary-color: #f0f6ff;
   --inverted-secondary-color: #b7d0ff;
   --inverted-background-color: #005fff;
+
+  // skeleton
+  --skeleton-shadow: #b7d0ff;
+  --skeleton-color: #f0f6ff;
+
+  // code
+  --code-background: #c3d2f1;
 }
