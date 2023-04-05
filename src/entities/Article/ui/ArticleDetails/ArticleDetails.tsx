@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { memo, useCallback, useEffect } from 'react'
+import { memo, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import {
   Text, TextAlign, TextSize, TextTheme,
@@ -14,6 +14,7 @@ import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/art
 import { ArticleCodeBlockComponent } from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleTextBlockComponent } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { ArticleImageBlockComponent } from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import {
   getArticleDetailsData,
   getArticleDetailsError,
@@ -75,11 +76,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     }
   }, [])
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchArticleById(id))
-    }
-  }, [dispatch, id])
+  useInitialEffect(() => {
+    dispatch(fetchArticleById(id))
+  })
 
   let content
 
