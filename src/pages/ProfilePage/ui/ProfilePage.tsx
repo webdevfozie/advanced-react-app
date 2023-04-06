@@ -19,6 +19,8 @@ import { Country } from 'entities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { useTranslation } from 'react-i18next'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { useParams } from 'react-router-dom'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import cls from './ProfilePage.module.scss'
 
@@ -39,6 +41,7 @@ const ProfilePage = (props: ProfilePageProps) => {
   const isLoading = useSelector(getProfileIsLoading)
   const readonly = useSelector(getProfileReadonly)
   const validateErrors = useSelector(getProfileValidateErrors)
+  const { id } = useParams<{id: string}>()
 
   const validateErrorTranslations = {
     [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия являются обязательными'),
@@ -51,11 +54,11 @@ const ProfilePage = (props: ProfilePageProps) => {
     [ValidateProfileError.INCORRECT_USERNAME]: t('Некорректный логин'),
   }
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData())
+  useInitialEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(id))
     }
-  }, [dispatch])
+  })
 
   const onChangeFirstName = useCallback((value: string = '') => {
     dispatch(profileActions.updateProfile({
@@ -107,7 +110,7 @@ const ProfilePage = (props: ProfilePageProps) => {
   }, [dispatch])
 
   return (
-    <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
+    <DynamicModuleLoader reducers={initialReducers}>
       <div className={classNames(cls.profilePage, {}, [className])}>
         <ProfilePageHeader />
         {validateErrors?.length && validateErrors.map((error) => (

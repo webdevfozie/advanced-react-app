@@ -5,6 +5,7 @@ import { Currency } from 'entities/Currency'
 import { getProfileForm } from './getProfileForm'
 
 const data: Profile = {
+  id: '1',
   username: 'affff',
   firstname: 'Artem',
   lastname: 'Frolov',

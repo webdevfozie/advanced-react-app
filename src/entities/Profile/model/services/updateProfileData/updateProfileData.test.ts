@@ -5,6 +5,7 @@ import { Profile, ValidateProfileError } from '../../types/profile'
 import { updateProfileData } from './updateProfileData'
 
 const data: Profile = {
+  id: '1',
   username: 'affff',
   firstname: 'Artem',
   lastname: 'Frolov',

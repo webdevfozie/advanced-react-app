@@ -5,6 +5,7 @@ import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { validateProfileData } from './validateProfileData'
 
 const data: Profile = {
+  id: '1',
   username: 'affff',
   firstname: 'Artem',
   lastname: 'Frolov',

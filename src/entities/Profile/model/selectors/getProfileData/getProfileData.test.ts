@@ -5,6 +5,7 @@ import { getProfileData } from './getProfileData'
 import { Profile } from '../../types/profile'
 
 const data: Profile = {
+  id: '1',
   username: 'affff',
   firstname: 'Artem',
   lastname: 'Frolov',
