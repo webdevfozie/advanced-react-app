@@ -12,6 +12,7 @@ interface AppLinkProps extends LinkProps {
   className?: string,
   theme?: AppLinkTheme,
   children?: ReactNode,
+  underline?: boolean
 }
 
 export const AppLink = memo((props: AppLinkProps) => {
@@ -20,13 +21,14 @@ export const AppLink = memo((props: AppLinkProps) => {
     children,
     to,
     theme = AppLinkTheme.PRIMARY,
+    underline = true,
     ...otherProps
   } = props
 
   return (
     <Link
       to={to}
-      className={classNames(cls.appLink, {}, [className, cls[theme]])}
+      className={classNames(cls.appLink, { [cls.underline]: underline }, [className, cls[theme]])}
       /* eslint-disable-next-line react/jsx-props-no-spreading */
       {...otherProps}
     >

@@ -1,0 +1,100 @@
+.BIG {
+  .views {
+    margin-left: auto;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+  }
+
+  .username {
+    margin-left: 8px;
+  }
+
+  .createdAt {
+    margin-left: auto;
+  }
+
+  .title {
+    margin-top: 8px;
+  }
+
+  .img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin: 8px 0;
+  }
+
+  .textBlock {
+    margin-bottom: 16px;
+    max-height: 180px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.SMALL {
+  width: 230px;
+  transition: 200ms;
+  cursor: pointer;
+
+  .createdAt {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: 200ms;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+
+    .createdAt {
+      opacity: 1;
+    }
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .infoWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .types p {
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .views {
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .title h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

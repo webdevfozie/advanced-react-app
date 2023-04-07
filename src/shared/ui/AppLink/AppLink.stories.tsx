@@ -23,6 +23,13 @@ Primary.args = {
   theme: AppLinkTheme.PRIMARY,
 }
 
+export const NoUnderline = Template.bind({})
+NoUnderline.args = {
+  children: 'AppLink',
+  theme: AppLinkTheme.PRIMARY,
+  underline: false,
+}
+
 export const Secondary = Template.bind({})
 Secondary.args = {
   children: 'AppLink',

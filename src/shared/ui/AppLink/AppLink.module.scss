@@ -1,5 +1,10 @@
 .appLink {
   transition: 300ms;
+  text-decoration: none;
+
+  &.underline {
+    text-decoration: underline;
+  }
 
   &:hover {
     opacity: 0.8;

@@ -10,6 +10,9 @@ import { useSelector } from 'react-redux'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { AddCommentForm } from 'features/AddCommentForm'
+import { AppLink } from 'shared/ui/AppLink/AppLink'
+import { Button } from 'shared/ui/Button/Button'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import {
   fetchCommentsByArticleId,
@@ -56,6 +59,9 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers}>
       <div className={classNames(cls.articleDetailsPage, {}, [className])}>
+        <AppLink to={RoutePath.articles}>
+          <Button>{t('Назад к списку')}</Button>
+        </AppLink>
         <ArticleDetails id={id} />
         <div className={cls.comments}>
           <Text className={cls['comments-title']} title={t('Комментарии')} />
