@@ -11,7 +11,7 @@ import {
   profileReducer,
 } from 'entities/Profile'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { getProfileForm } from 'entities/Profile/model/selectors/getProfileForm/getProfileForm'
 import { Currency } from 'entities/Currency'
@@ -21,6 +21,7 @@ import { ValidateProfileError } from 'entities/Profile/model/types/profile'
 import { useTranslation } from 'react-i18next'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useParams } from 'react-router-dom'
+import { Page } from 'shared/ui/Page/Page'
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader'
 import cls from './ProfilePage.module.scss'
 
@@ -111,7 +112,7 @@ const ProfilePage = (props: ProfilePageProps) => {
 
   return (
     <DynamicModuleLoader reducers={initialReducers}>
-      <div className={classNames(cls.profilePage, {}, [className])}>
+      <Page className={classNames(cls.profilePage, {}, [className])}>
         <ProfilePageHeader />
         {validateErrors?.length && validateErrors.map((error) => (
           <Text
@@ -135,7 +136,7 @@ const ProfilePage = (props: ProfilePageProps) => {
           onChangeCurrency={onChangeCurrency}
           onChangeCountry={onChangeCountry}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }

@@ -13,6 +13,7 @@ import { AddCommentForm } from 'features/AddCommentForm'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { Button } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { Page } from 'shared/ui/Page/Page'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import {
   fetchCommentsByArticleId,
@@ -50,15 +51,15 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.articleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
         {t('Статья не найдена')}
-      </div>
+      </Page>
     )
   }
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.articleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
         <AppLink to={RoutePath.articles}>
           <Button>{t('Назад к списку')}</Button>
         </AppLink>
@@ -74,7 +75,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
             commentList={commentList}
           />
         </div>
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }

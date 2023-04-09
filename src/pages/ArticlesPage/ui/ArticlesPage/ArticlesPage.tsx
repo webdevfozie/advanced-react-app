@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { memo, useCallback } from 'react'
 import { ArticleList, ArticleView, ArticleViewSwitcher } from 'entities/Article'
@@ -6,12 +5,16 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
+import { Page } from 'shared/ui/Page/Page'
+import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage'
+import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text'
+import { useTranslation } from 'react-i18next'
 import {
   getArticlesPageError,
   getArticlesPageIsLoading,
   getArticlesPageView,
 } from '../../model/selectors/articlePageSelectors'
-import { fetchArticlesList } from '../../model/services/fetchArticlesList'
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { articlesPageActions, articlesPageReducer, getArticles } from '../../model/slices/articlesPageSlice'
 import cls from './ArticlesPage.module.scss'
 
@@ -29,24 +32,46 @@ const ArticlesPage = (props: ArticlesPageProps) => {
   } = props
 
   const { t } = useTranslation()
+
   const dispatch = useAppDispatch()
   const articles = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlesPageIsLoading)
-  const error = useSelector(getArticlesPageError)
   const view = useSelector(getArticlesPageView)
+  const error = useSelector(getArticlesPageError)
 
   useInitialEffect(() => {
-    dispatch(fetchArticlesList())
     dispatch(articlesPageActions.initState())
+    dispatch(fetchArticlesList({
+      page: 1,
+    }))
   })
 
   const onChangeView = useCallback((view: ArticleView) => {
     dispatch(articlesPageActions.setView(view))
   }, [dispatch])
 
+  const onLoadNextPart = useCallback(() => {
+    dispatch(fetchNextArticlesPage(isLoading))
+  }, [dispatch, isLoading])
+
+  if (error) {
+    return (
+      <Page className={classNames(cls.articlesPage, {}, [className])}>
+        <Text
+          title={t('Произошла ошибка при загрузке статей!')}
+          align={TextAlign.CENTER}
+          theme={TextTheme.ERROR}
+        />
+      </Page>
+    )
+  }
+
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.articlesPage, {}, [className])}>
+      <Page
+        className={classNames(cls.articlesPage, {}, [className])}
+        onScrollEndCallback={onLoadNextPart}
+      >
         <ArticleViewSwitcher
           className={cls.viewSwitcher}
           view={view}
@@ -57,7 +82,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
           view={view}
           articles={articles}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }
