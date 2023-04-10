@@ -13,7 +13,7 @@ import { AddCommentForm } from 'features/AddCommentForm'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { Button } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import {
   fetchCommentsByArticleId,
