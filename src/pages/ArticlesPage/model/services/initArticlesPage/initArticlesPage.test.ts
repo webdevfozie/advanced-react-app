@@ -1,5 +1,4 @@
 import { TestAsyncThunk } from 'shared/lib/testing/TestAsyncThunk/TestAsyncThunk'
-import { getArticlesPageMounted } from 'pages/ArticlesPage/model/selectors/articlesPageSelectors'
 import { initArticlesPage } from './initArticlesPage'
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList'
 

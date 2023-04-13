@@ -1,6 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { ArticleListItem } from 'entities/Article/ui/ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
+import { Text } from 'shared/ui/Text/Text'
+import { useTranslation } from 'react-i18next'
 import cls from './ArticleList.module.scss'
 import { Article, ArticleView } from '../../model/types/article'
 
@@ -25,6 +27,8 @@ export const ArticleList = (props: ArticleListProps) => {
     view = ArticleView.SMALL,
   } = props
 
+  const { t } = useTranslation()
+
   const renderArticle = (article: Article) => (
     <ArticleListItem
       key={article.id}
@@ -33,6 +37,12 @@ export const ArticleList = (props: ArticleListProps) => {
       view={view}
     />
   )
+
+  if (!isLoading && !articles?.length) {
+    return (
+      <Text title={t('Статьи не найдены')} />
+    )
+  }
 
   return (
     <div className={classNames(cls.articleList, {}, [className, cls[view]])}>

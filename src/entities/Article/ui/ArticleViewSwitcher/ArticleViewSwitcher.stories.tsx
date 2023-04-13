@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { ArticleViewSwitcher } from './ArticleViewSwitcher'
 
 export default {
-  title: 'slice/ArticleViewSwitcher',
+  title: 'entities/ArticleViewSwitcher',
   component: ArticleViewSwitcher,
   argTypes: {
     backgroundColor: { control: 'color' },
