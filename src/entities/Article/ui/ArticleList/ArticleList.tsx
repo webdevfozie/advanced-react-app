@@ -3,6 +3,7 @@ import { ArticleListItem } from 'entities/Article/ui/ArticleListItem/ArticleList
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
+import { HTMLAttributeAnchorTarget } from 'react'
 import cls from './ArticleList.module.scss'
 import { Article, ArticleView } from '../../model/types/article'
 
@@ -11,6 +12,7 @@ interface ArticleListProps {
   articles?: Article[]
   isLoading?: boolean
   view?: ArticleView
+  target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.BIG ? 3 : 18)
@@ -24,6 +26,7 @@ export const ArticleList = (props: ArticleListProps) => {
     className,
     articles,
     isLoading,
+    target,
     view = ArticleView.SMALL,
   } = props
 
@@ -31,6 +34,7 @@ export const ArticleList = (props: ArticleListProps) => {
 
   const renderArticle = (article: Article) => (
     <ArticleListItem
+      target={target}
       key={article.id}
       className={cls.card}
       article={article}

@@ -1,5 +1,17 @@
 .articleDetailsPage {
   min-height: 100%;
+
+  .recommendationsTitle {
+    margin-bottom: 16px;
+  }
+
+  .recommendations {
+    margin-bottom: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 12px;
+  }
 }
 
 .comments {

@@ -7,10 +7,10 @@ import {
 import { ProfileSchema } from 'entities/Profile'
 import { AxiosInstance } from 'axios'
 import { ArticleDetailsSchema } from 'entities/Article'
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 import { AddCommentFormSchema } from 'features/AddCommentForm'
 import { ArticlesPageSchema } from 'pages/ArticlesPage'
 import { ScrollSavingSchema } from 'features/ScrollSaving'
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
 import { createReduxStore } from './store'
 
 export interface StateSchema {
@@ -22,7 +22,7 @@ export interface StateSchema {
   loginForm?: LoginSchema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
-  articleDetailsComments?: ArticleDetailsCommentsSchema
+  articleDetailsPage?: ArticleDetailsPageSchema
   addCommentForm?: AddCommentFormSchema
   articlesPage?: ArticlesPageSchema
 }

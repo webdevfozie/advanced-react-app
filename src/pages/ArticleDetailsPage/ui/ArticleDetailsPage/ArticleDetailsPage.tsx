@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { memo, useCallback } from 'react'
-import { ArticleDetails } from 'entities/Article'
+import { ArticleDetails, ArticleList } from 'entities/Article'
 import { useParams } from 'react-router-dom'
 import { Text } from 'shared/ui/Text/Text'
 import { CommentList } from 'entities/Comment'
@@ -14,20 +14,30 @@ import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { Button } from 'shared/ui/Button/Button'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { Page } from 'widgets/Page'
+import {
+  fetchArticleRecommendations,
+} from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations'
+import {
+  getArticleRecommendationsIsLoading,
+} from '../../model/selectors/recommendations'
+import {
+  getArticleRecommendations,
+} from '../../model/slice/articleDetailsRecommendationsSlice'
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import {
   fetchCommentsByArticleId,
 } from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId'
 import cls from './ArticleDetailsPage.module.scss'
-import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slice/articleDetailsCommentsSlice'
+import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice'
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
+import { articleDetailsPageReducer } from '../../model/slice'
 
 interface ArticleDetailsPageProps {
   className?: string,
 }
 
 const reducers: ReducersList = {
-  articleDetailsComments: articleDetailsCommentsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
 }
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
@@ -40,6 +50,8 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const dispatch = useAppDispatch()
   const commentList = useSelector(getArticleComments.selectAll)
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
+  const recommendations = useSelector(getArticleRecommendations.selectAll)
+  const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading)
 
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text))
@@ -47,6 +59,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id))
+    dispatch(fetchArticleRecommendations())
   })
 
   if (!id) {
@@ -65,6 +78,13 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
         </AppLink>
         <ArticleDetails id={id} />
         <div className={cls.comments}>
+          <Text className={cls.recommendationsTitle} title={t('Рекомендуем')} />
+          <ArticleList
+            target="_blank"
+            className={cls.recommendations}
+            articles={recommendations}
+            isLoading={recommendationsIsLoading}
+          />
           <Text className={cls['comments-title']} title={t('Комментарии')} />
           <AddCommentForm
             onSendComment={onSendComment}

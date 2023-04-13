@@ -51,7 +51,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to', 'name'],
+      ignoreAttribute: ['data-testid', 'to', 'name', 'target'],
       ignoreComponent: ['Icon'],
     }],
     'max-len': ['error', {
@@ -72,6 +72,7 @@ module.exports = {
     'react/display-name': 'off',
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
+    'arrow-body-style': 'off',
   },
   globals: {
     __IS_DEV__: true,

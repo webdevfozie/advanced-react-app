@@ -8,6 +8,7 @@ import { Button } from 'shared/ui/Button/Button'
 import { ArticleTextBlockComponent } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { HTMLAttributeAnchorTarget } from 'react'
 import cls from './ArticleListItem.module.scss'
 import {
   Article, ArticleBlockType, ArticleTextBlock, ArticleView,
@@ -17,6 +18,7 @@ interface ArticleListItemProps {
   className?: string
   article: Article
   view: ArticleView
+  target?: HTMLAttributeAnchorTarget
 }
 
 export const ArticleListItem = (props: ArticleListItemProps) => {
@@ -24,6 +26,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
     className,
     article,
     view,
+    target,
   } = props
   const { t } = useTranslation()
 
@@ -55,7 +58,11 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
             <ArticleTextBlockComponent block={firstTextBlock} className={cls.textBlock} />
           )}
           <div className={cls.footer}>
-            <AppLink to={articleUrl} underline={false}>
+            <AppLink
+              to={articleUrl}
+              underline={false}
+              target={target}
+            >
               <Button>{t('Читать далее...')}</Button>
             </AppLink>
             {views}
@@ -66,20 +73,23 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
   }
 
   return (
-    <div className={classNames(cls.articleListItem, {}, [className, cls[view]])}>
-      <AppLink to={articleUrl} underline={false}>
-        <Card>
-          <div className={cls.imageWrapper}>
-            <img src={article.img} className={cls.img} alt={article.title} />
-            <Text className={cls.createdAt}>{article.createdAt}</Text>
-          </div>
-          <div className={cls.infoWrapper}>
-            {types}
-            {views}
-          </div>
-          <Text className={cls.title}>{article.title}</Text>
-        </Card>
-      </AppLink>
-    </div>
+    <AppLink
+      to={articleUrl}
+      target={target}
+      underline={false}
+      className={classNames(cls.articleListItem, {}, [className, cls[view]])}
+    >
+      <Card>
+        <div className={cls.imageWrapper}>
+          <img src={article.img} className={cls.img} alt={article.title} />
+          <Text className={cls.createdAt}>{article.createdAt}</Text>
+        </div>
+        <div className={cls.infoWrapper}>
+          {types}
+          {views}
+        </div>
+        <Text className={cls.title}>{article.title}</Text>
+      </Card>
+    </AppLink>
   )
 }
