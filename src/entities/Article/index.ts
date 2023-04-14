@@ -12,11 +12,11 @@ export {
   ArticleDetails,
   getArticleDetailsData,
   ArticleList,
+  ArticlesSortSelector,
+  ArticleViewSwitcher,
   Article,
   ArticleDetailsSchema,
   ArticleView,
-  ArticleViewSwitcher,
   ArticleSortField,
-  ArticlesSortSelector,
   ArticleType,
 }

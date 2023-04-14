@@ -10,7 +10,11 @@ export const fetchArticleById = createAsyncThunk<Article, string, ThunkConfig<st
     } = thunkAPI
 
     try {
-      const { data } = await extra.api.get<Article>(`/articles/${articleId}`)
+      const { data } = await extra.api.get<Article>(`/articles/${articleId}`, {
+        params: {
+          _expand: 'user',
+        },
+      })
 
       if (!data) {
         // noinspection ExceptionCaughtLocallyJS

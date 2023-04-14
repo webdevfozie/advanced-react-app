@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Icon } from 'shared/ui/Icon/Icon'
 import { memo, useCallback, useState } from 'react'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
@@ -7,6 +6,10 @@ import { LoginModal } from 'features/AuthByUsername'
 import { useSelector } from 'react-redux'
 import { getUserAuthData, userActions } from 'entities/User'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { Icon } from 'shared/ui/Icon/Icon'
+import { AppLink } from 'shared/ui/AppLink/AppLink'
+import { AppRoutes, RoutePath } from 'shared/config/routeConfig/routeConfig'
 import cls from './Navbar.module.scss'
 
 interface NavbarProps {
@@ -29,6 +32,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   if (authData) {
     return (
       <header className={classNames(cls.navbar, {}, [className])}>
+        <Text
+          theme={TextTheme.INVERTED}
+          title={t('Advanced React App')}
+          className={cls.logo}
+        />
+        <AppLink
+          to={RoutePath[AppRoutes.ARTICLE_CREATE]}
+          underline={false}
+        >
+          <Button
+            theme={ButtonTheme.OUTLINE_INVERTED}
+          >
+            {t('Создать новую статью')}
+          </Button>
+        </AppLink>
         <div className={cls.links}>
           <Button
             onClick={onLogout}
