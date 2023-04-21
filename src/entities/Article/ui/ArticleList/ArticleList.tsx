@@ -3,13 +3,17 @@ import { ArticleListItem } from 'entities/Article/ui/ArticleListItem/ArticleList
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
-import { HTMLAttributeAnchorTarget } from 'react'
+import { HTMLAttributeAnchorTarget, memo } from 'react'
+import {
+  List, ListRowProps, WindowScroller,
+} from 'react-virtualized'
+import { PAGE_ID } from 'widgets/Page/ui/Page'
 import cls from './ArticleList.module.scss'
 import { Article, ArticleView } from '../../model/types/article'
 
 interface ArticleListProps {
   className?: string
-  articles?: Article[]
+  articles: Article[]
   isLoading?: boolean
   view?: ArticleView
   target?: HTMLAttributeAnchorTarget
@@ -21,7 +25,7 @@ const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.BIG ?
     <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
   ))
 
-export const ArticleList = (props: ArticleListProps) => {
+export const ArticleList = memo((props: ArticleListProps) => {
   const {
     className,
     articles,
@@ -32,15 +36,38 @@ export const ArticleList = (props: ArticleListProps) => {
 
   const { t } = useTranslation()
 
-  const renderArticle = (article: Article) => (
-    <ArticleListItem
-      target={target}
-      key={article.id}
-      className={cls.card}
-      article={article}
-      view={view}
-    />
-  )
+  const isBig = view === ArticleView.BIG
+
+  const itemsPerRow = isBig ? 1 : 3
+  const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow)
+
+  const rowRenderer = ({ index, key, style }: ListRowProps) => {
+    const items = []
+    const fromIndex = index * itemsPerRow
+    const toIndex = Math.min(fromIndex + itemsPerRow, articles.length)
+
+    for (let i = fromIndex; i < toIndex; i += 1) {
+      items.push(
+        <ArticleListItem
+          target={target}
+          className={cls.card}
+          article={articles[i]}
+          view={view}
+          key={articles[i].id}
+        />,
+      )
+    }
+
+    return (
+      <div
+        key={key}
+        style={style}
+        className={cls.row}
+      >
+        {items}
+      </div>
+    )
+  }
 
   if (!isLoading && !articles?.length) {
     return (
@@ -49,13 +76,35 @@ export const ArticleList = (props: ArticleListProps) => {
   }
 
   return (
-    <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
-      {
-        articles?.length
-          ? articles.map(renderArticle)
-          : null
-      }
-      {isLoading && getSkeletons(view)}
-    </div>
+    <WindowScroller
+      scrollElement={document.getElementById(PAGE_ID) as Element}
+    >
+      {({
+        width,
+        height,
+        registerChild,
+        onChildScroll,
+        isScrolling,
+        scrollTop,
+      }) => (
+        <div
+          className={classNames(cls.articleList, {}, [className, cls[view]])}
+          ref={registerChild}
+        >
+          <List
+            height={height ?? 700}
+            rowCount={rowCount}
+            rowHeight={isBig ? 660 : 320}
+            rowRenderer={rowRenderer}
+            width={width ? width - 80 : 700}
+            autoHeight
+            onScroll={onChildScroll}
+            isScrolling={isScrolling}
+            scrollTop={scrollTop}
+          />
+          {isLoading && getSkeletons(view)}
+        </div>
+      )}
+    </WindowScroller>
   )
-}
+})

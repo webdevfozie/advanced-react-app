@@ -18,6 +18,8 @@ interface PageProps {
   onScrollEndCallback?: () => void
 }
 
+export const PAGE_ID = 'page_id'
+
 export const Page = (props: PageProps) => {
   const {
     className,
@@ -53,6 +55,7 @@ export const Page = (props: PageProps) => {
       ref={wrapperRef}
       className={classNames(cls.page, {}, [className])}
       onScroll={onScroll}
+      id={PAGE_ID}
     >
       {children}
       {onScrollEndCallback ? <div className={cls.scrollTrigger} ref={triggerRef} /> : null}
