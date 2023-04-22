@@ -1,7 +1,7 @@
 import { StateSchema } from 'app/providers/StoreProvider'
-import { Profile } from 'entities/Profile'
 import { Country } from 'entities/Country'
 import { Currency } from 'entities/Currency'
+import { Profile } from '../../types/profile'
 import { getProfileForm } from './getProfileForm'
 
 const data: Profile = {

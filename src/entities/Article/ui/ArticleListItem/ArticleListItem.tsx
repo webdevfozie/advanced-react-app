@@ -5,10 +5,10 @@ import { Icon } from 'shared/ui/Icon/Icon'
 import { Card } from 'shared/ui/Card/Card'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Button } from 'shared/ui/Button/Button'
-import { ArticleTextBlockComponent } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { HTMLAttributeAnchorTarget } from 'react'
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import cls from './ArticleListItem.module.scss'
 import {
   Article, ArticleBlockType, ArticleTextBlock, ArticleView,

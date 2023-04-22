@@ -1,4 +1,4 @@
-import { ArticlesSortSelector } from 'entities/Article/ui/ArticlesSortSelector/ArticlesSortSelector'
+import { ArticlesSortSelector } from './ui/ArticlesSortSelector/ArticlesSortSelector'
 import { ArticleViewSwitcher } from './ui/ArticleViewSwitcher/ArticleViewSwitcher'
 import { ArticleList } from './ui/ArticleList/ArticleList'
 import { ArticleDetails } from './ui/ArticleDetails/ArticleDetails'

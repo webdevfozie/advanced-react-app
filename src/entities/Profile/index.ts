@@ -1,8 +1,6 @@
-import { getProfileReadonly } from 'entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly'
-import { updateProfileData } from 'entities/Profile/model/services/updateProfileData/updateProfileData'
-import {
-  getProfileValidateErrors,
-} from 'entities/Profile/model/selectors/getProfileValidateErrors/getProfileValidateErrors'
+import { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors'
+import { getProfileReadonly } from './model/selectors/getProfileReadonly/getProfileReadonly'
+import { updateProfileData } from './model/services/updateProfileData/updateProfileData'
 import { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getProfileIsLoading'
 import { getProfileError } from './model/selectors/getProfileError/getProfileError'
 import { getProfileData } from './model/selectors/getProfileData/getProfileData'
