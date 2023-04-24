@@ -11,6 +11,7 @@ import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
 import { Icon } from 'shared/ui/Icon/Icon'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { HStack, VStack } from 'shared/ui/Stack'
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
@@ -101,27 +102,27 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   } else {
     content = (
       <>
-        <div className={cls.avatarWrapper}>
-          <Avatar
-            size={200}
-            src={article?.img}
-            className={cls.avatar}
-          />
-        </div>
+        <Avatar
+          size={200}
+          src={article?.img}
+          className={cls.avatar}
+        />
         <Text
           title={article?.title}
           size={TextSize.L}
         >
           {article?.subtitle}
         </Text>
-        <div className={cls.articleInfo}>
-          <Icon>👁️</Icon>
-          <Text>{article?.views}</Text>
-        </div>
-        <div className={cls.articleInfo}>
-          <Icon>📆</Icon>
-          <Text>{article?.createdAt}</Text>
-        </div>
+        <VStack gap={4}>
+          <HStack gap={4} className={cls.articleInfo}>
+            <Icon>👁️</Icon>
+            <Text>{article?.views}</Text>
+          </HStack>
+          <HStack gap={4} className={cls.articleInfo}>
+            <Icon>📆</Icon>
+            <Text>{article?.createdAt}</Text>
+          </HStack>
+        </VStack>
         {article?.blocks.map(renderBlock)}
       </>
     )
@@ -129,9 +130,13 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.articleDetails, {}, [className])}>
+      <VStack
+        gap={16}
+        max
+        className={classNames(cls.articleDetails, {}, [className])}
+      >
         {content}
-      </div>
+      </VStack>
     </DynamicModuleLoader>
   )
 })

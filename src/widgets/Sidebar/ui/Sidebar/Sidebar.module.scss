@@ -10,11 +10,6 @@
 .switchers {
   position: absolute;
   bottom: 48px;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .collapse-button {
@@ -23,12 +18,6 @@
   bottom: 8px;
   border: 2px solid var(--inverted-background-color);
   z-index: 1;
-}
-
-.items {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 }
 
 .collapsed {

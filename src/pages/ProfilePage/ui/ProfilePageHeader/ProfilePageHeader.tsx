@@ -9,7 +9,7 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useCallback } from 'react'
 import { getUserAuthData } from 'entities/User'
-import cls from './ProfilePageHeader.module.scss'
+import { HStack, VStack } from 'shared/ui/Stack'
 
 interface ProfilePageHeaderProps {
   className?: string,
@@ -40,37 +40,34 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
   }, [dispatch])
 
   return (
-    <div className={classNames(cls.profilePageHeader, {}, [className])}>
-      <div className={cls.header}>
-        <Text title={t('Профиль')} />
-        {canEdit && (
-          readonly ? (
+    <HStack max justify="between" className={classNames('', {}, [className])}>
+      <Text title={t('Профиль')} />
+      {canEdit && (
+        readonly ? (
+          <Button
+            theme={ButtonTheme.OUTLINE}
+            onClick={onEdit}
+          >
+            {t('Редактировать профиль')}
+          </Button>
+        ) : (
+          <HStack gap={8}>
+            <Button
+              theme={ButtonTheme.OUTLINE_WARNING}
+              onClick={onCancelEdit}
+            >
+              {t('Отменить')}
+            </Button>
+
             <Button
               theme={ButtonTheme.OUTLINE}
-              className={cls.editBtn}
-              onClick={onEdit}
+              onClick={onSave}
             >
-              {t('Редактировать профиль')}
+              {t('Сохранить')}
             </Button>
-          ) : (
-            <div className={cls.editBtn}>
-              <Button
-                theme={ButtonTheme.OUTLINE_WARNING}
-                onClick={onCancelEdit}
-              >
-                {t('Отменить')}
-              </Button>
-
-              <Button
-                theme={ButtonTheme.OUTLINE}
-                onClick={onSave}
-              >
-                {t('Сохранить')}
-              </Button>
-            </div>
-          )
-        )}
-      </div>
-    </div>
+          </HStack>
+        )
+      )}
+    </HStack>
   )
 }

@@ -5,22 +5,8 @@
   transition: 200ms;
 }
 
-.data {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.loading,
-.error {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .avatarWrapper {
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .editing {
