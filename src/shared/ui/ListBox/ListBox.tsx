@@ -4,14 +4,13 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { HStack } from '../Stack'
 import { Button } from '../Button/Button'
 import cls from './ListBox.module.scss'
+import { Direction } from '../../types/ui'
 
 interface ListBoxItem {
   value: string,
   content: ReactNode,
   disabled?: boolean
 }
-
-type LisBoxDirection = 'top' | 'bottom'
 
 interface ListBoxProps {
   items?: ListBoxItem[],
@@ -21,7 +20,7 @@ interface ListBoxProps {
   label?: string,
   onChange: <T extends string>(value: T) => void,
   readonly?: boolean,
-  direction?: LisBoxDirection
+  direction?: Direction
 }
 
 export function ListBox(props: ListBoxProps) {

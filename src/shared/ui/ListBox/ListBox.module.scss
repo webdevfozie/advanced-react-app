@@ -11,12 +11,24 @@
   border: 2px solid var(--primary-color);
   min-width: 100%;
 
-  &.top {
+  &.top-left {
     bottom: 100%;
+    left: 0;
   }
 
-  &.bottom {
+  &.bottom-left {
     top: 100%;
+    left: 0;
+  }
+
+  &.top-right {
+    bottom: 100%;
+    right: 0;
+  }
+
+  &.bottom-right {
+    top: 100%;
+    right: 0;
   }
 }
 
