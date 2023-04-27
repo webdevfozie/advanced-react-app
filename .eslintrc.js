@@ -52,7 +52,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['role', 'data-testid', 'to', 'name', 'target', 'direction', 'justify', 'align', 'gap'],
+      ignoreAttribute: ['role', 'data-testid', 'to', 'name', 'target', 'direction', 'justify', 'align', 'gap', 'as'],
       ignoreComponent: ['Icon'],
     }],
     'max-len': ['error', {

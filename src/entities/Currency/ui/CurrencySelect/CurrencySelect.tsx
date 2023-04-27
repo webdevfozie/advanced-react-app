@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Select, SelectOption } from 'shared/ui/Select/Select'
 import { memo, useCallback } from 'react'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
 import { Currency } from '../../model/types/currency'
 
 interface CurrencySelectProps {
@@ -9,7 +9,7 @@ interface CurrencySelectProps {
   readonly?: boolean
 }
 
-const CurrencyOptions: SelectOption[] = Object.values(Currency).map((currency) => ({
+const CurrencyOptions = Object.values(Currency).map((currency) => ({
   value: currency,
   content: currency,
 }))
@@ -28,9 +28,9 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
   }, [onChange])
 
   return (
-    <Select
+    <ListBox
       label={t('Укажите валюту')}
-      options={CurrencyOptions}
+      items={CurrencyOptions}
       value={value}
       onChange={onChangeHandler}
       readonly={readonly}

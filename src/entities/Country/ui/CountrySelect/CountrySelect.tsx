@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Select, SelectOption } from 'shared/ui/Select/Select'
 import { memo, useCallback } from 'react'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
 import { Country } from '../../model/types/country'
 
 interface CountrySelectProps {
@@ -9,7 +9,7 @@ interface CountrySelectProps {
   readonly?: boolean
 }
 
-const CountryOptions: SelectOption[] = Object.values(Country).map((currency) => ({
+const CountryOptions = Object.values(Country).map((currency) => ({
   value: currency,
   content: currency,
 }))
@@ -28,9 +28,9 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
   }, [onChange])
 
   return (
-    <Select
+    <ListBox
       label={t('Укажите страну')}
-      options={CountryOptions}
+      items={CountryOptions}
       value={value}
       onChange={onChangeHandler}
       readonly={readonly}
