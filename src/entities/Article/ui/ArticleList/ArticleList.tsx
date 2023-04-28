@@ -36,6 +36,10 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
   const { t } = useTranslation()
 
+  if (!articles || !articles.length) {
+    return null
+  }
+
   const isBig = view === ArticleView.BIG
 
   const itemsPerRow = isBig ? 1 : 3
