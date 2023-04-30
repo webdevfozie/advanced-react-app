@@ -29,6 +29,7 @@
   flex-direction: column;
   overflow: hidden;
   margin-top: 4px;
+  padding: 4px;
 
   &.top-left {
     bottom: 100%;
@@ -52,6 +53,7 @@
 }
 
 .item {
+  width: 100%;
   padding: 8px 12px;
   margin: 0;
   border: 0;
@@ -59,6 +61,8 @@
   cursor: pointer;
   transition: 300ms;
   color: var(--primary-color);
+  border-radius: 6px;
+  background-color: var(--inverted-primary-color);
 }
 
 .active {
