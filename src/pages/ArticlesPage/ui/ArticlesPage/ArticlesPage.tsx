@@ -10,10 +10,7 @@ import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router-dom'
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList'
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage'
-import {
-  getArticlesPageError,
-  getArticlesPageIsLoading,
-} from '../../model/selectors/articlesPageSelectors'
+import { getArticlesPageError, getArticlesPageIsLoading } from '../../model/selectors/articlesPageSelectors'
 import { articlesPageReducer } from '../../model/slices/articlesPageSlice'
 import cls from './ArticlesPage.module.scss'
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage'

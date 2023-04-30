@@ -3,7 +3,7 @@ import { Currency } from 'entities/Currency'
 import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData'
 import { Profile } from '../../../../entities/Profile/model/types/profile'
-import { profileReducer, profileActions } from './ProfileSlice'
+import { profileActions, profileReducer } from './ProfileSlice'
 
 const data: Profile = {
   id: '1',

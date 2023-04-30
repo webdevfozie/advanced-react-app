@@ -1,7 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames'
-import {
-  memo, useCallback, useMemo, useState,
-} from 'react'
+import { memo, useCallback, useState } from 'react'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
 import { useTranslation } from 'react-i18next'
 import { LoginModal } from 'features/AuthByUsername'

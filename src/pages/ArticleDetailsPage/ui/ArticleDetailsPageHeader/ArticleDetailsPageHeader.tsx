@@ -10,7 +10,7 @@ import { getCanEditArticle } from '../../model/selectors/article'
 
 interface ArticleDetailsPageHeaderProps {
   className?: string,
-  id: string
+  id?: string
 }
 
 export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderProps) => {
@@ -27,7 +27,7 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
       <AppLink to={RoutePath.articles}>
         <Button>{t('Назад к списку')}</Button>
       </AppLink>
-      {canEdit && (
+      {(canEdit && id) && (
         <AppLink
           to={`${RoutePath['article-details']}${id}/edit`}
         >

@@ -2,9 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { HTMLAttributeAnchorTarget, memo } from 'react'
-import {
-  List, ListRowProps, WindowScroller,
-} from 'react-virtualized'
+import { List, ListRowProps, WindowScroller } from 'react-virtualized'
 import { PAGE_ID } from 'widgets/Page/ui/Page'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
@@ -83,6 +81,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   }
 
   return (
+    // @ts-ignore
     <WindowScroller
       scrollElement={document.getElementById(PAGE_ID) as Element}
     >
@@ -96,10 +95,12 @@ export const ArticleList = memo((props: ArticleListProps) => {
       }) => (
         <div
           className={classNames(cls.articleList, {}, [className, cls[view]])}
+          // @ts-ignore
           ref={registerChild}
         >
           {virtualization
             ? (
+              // @ts-ignore
               <List
                 height={height ?? 700}
                 rowCount={rowCount}
