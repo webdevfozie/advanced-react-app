@@ -5,12 +5,11 @@ import { useSelector } from 'react-redux'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Input } from 'shared/ui/Input/Input'
 import {
-  ArticlesSortSelector, ArticleViewSwitcher, ArticleView, ArticleSortField,
+  ArticlesSortSelector, ArticleViewSwitcher, ArticleView, ArticleSortField, ArticleType,
 } from 'entities/Article'
 import { SortOrder } from 'shared/types'
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
 import { TagItem, Tags } from 'shared/ui/Tags/Tags'
-import { ArticleType } from 'entities/Article/model/types/article'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import {
   getArticlesPageOrder, getArticlesPageSearch,

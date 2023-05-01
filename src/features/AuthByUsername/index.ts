@@ -3,5 +3,6 @@ import { LoginSchema } from './model/types/LoginSchema'
 
 export {
   LoginModal,
-  LoginSchema,
 }
+
+export type { LoginSchema }

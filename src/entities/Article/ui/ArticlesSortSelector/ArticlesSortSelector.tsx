@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { useCallback, useMemo } from 'react'
 import { SortOrder } from 'shared/types'
 import { ListBox } from 'shared/ui/ListBox/ListBox'
-import { ArticleSortField } from '../../model/types/article'
+import { ArticleSortField } from '../../model/consts/consts'
 import cls from './ArticlesSortSelector.module.scss'
 
 interface ArticlesSortSelectorProps {

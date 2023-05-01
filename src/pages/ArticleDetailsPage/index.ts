@@ -3,5 +3,5 @@ import { ArticleDetailsPageSchema } from './model/types'
 
 export {
   ArticleDetailsPage,
-  ArticleDetailsPageSchema,
 }
+export type { ArticleDetailsPageSchema }

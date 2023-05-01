@@ -7,11 +7,14 @@ import { User, UserSchema } from './model/types/User'
 export {
   userReducer,
   userActions,
-  User,
-  UserSchema,
   getUserAuthData,
   getUserMounted,
   isUserAdmin,
   isUserManager,
   getUserRoles,
+}
+
+export type {
+  User,
+  UserSchema,
 }
