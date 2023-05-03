@@ -1,10 +1,11 @@
 import { Fragment, ReactNode } from 'react'
 import { Listbox as HListBox } from '@headlessui/react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { HStack } from '../Stack'
-import { Button } from '../Button/Button'
+import { HStack } from '../../../Stack'
+import { Button } from '../../../Button/Button'
 import cls from './ListBox.module.scss'
-import { Direction } from '../../types/ui'
+import popupCls from '../../styles/popup.module.scss'
+import { Direction } from '../../../../types/ui'
 
 interface ListBoxItem {
   value: string,
@@ -42,7 +43,7 @@ export function ListBox(props: ListBoxProps) {
         value={value}
         onChange={onChange}
         as="div"
-        className={classNames(cls.listBox, {}, [className])}
+        className={classNames(popupCls.popup, {}, [className])}
         disabled={readonly}
       >
         <HListBox.Button
@@ -53,7 +54,7 @@ export function ListBox(props: ListBoxProps) {
           </Button>
         </HListBox.Button>
         <HListBox.Options
-          className={classNames(cls.options, {}, [cls[direction]])}
+          className={classNames(popupCls.menu, {}, [cls[direction]])}
         >
           {items?.map((item) => (
             <HListBox.Option
@@ -64,8 +65,8 @@ export function ListBox(props: ListBoxProps) {
             >
               {({ active, selected }) => (
                 <li
-                  className={classNames(cls.item, {
-                    [cls.active]: active,
+                  className={classNames(popupCls.item, {
+                    [popupCls.active]: active,
                     [cls.selected]: selected,
                   }, [])}
                 >
