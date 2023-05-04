@@ -15,8 +15,8 @@ export const Code = (props: CodeProps) => {
     text,
   } = props
 
-  const copy = useCallback(() => {
-    navigator.clipboard.writeText(text)
+  const copy = useCallback(async () => {
+    await navigator.clipboard.writeText(text)
   }, [text])
 
   return (
