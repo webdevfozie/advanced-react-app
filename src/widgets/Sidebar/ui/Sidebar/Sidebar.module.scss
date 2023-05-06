@@ -17,7 +17,7 @@
   right: -16px;
   bottom: 8px;
   border: 2px solid var(--inverted-background-color);
-  z-index: 1;
+  z-index: var(--sidebar-z-index);
 }
 
 .collapsed {

@@ -1,8 +1,8 @@
-import { Theme, useTheme } from 'app/providers/ThemeProvider'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from 'shared/ui/Button/Button'
-import { Icon, IconSize } from 'shared/ui/Icon/Icon'
 import { useCallback } from 'react'
+import { Theme, useTheme } from '@/app/providers/ThemeProvider'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Icon, IconSize } from '@/shared/ui/Icon/Icon'
 
 interface ThemeSwitcherProps {
   className?: string,

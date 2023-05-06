@@ -1,17 +1,17 @@
-import { CounterSchema } from 'entities/Counter'
-import { UserSchema } from 'entities/User'
-import { LoginSchema } from 'features/AuthByUsername'
 import {
   AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit'
 import { AxiosInstance } from 'axios'
-import { ArticleDetailsSchema } from 'entities/Article'
-import { AddCommentFormSchema } from 'features/AddCommentForm'
-import { ArticlesPageSchema } from 'pages/ArticlesPage'
-import { ScrollSavingSchema } from 'features/ScrollSaving'
-import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage'
-import { rtkApi } from 'shared/api/rtkApi'
-import { ProfileSchema } from 'features/EditableProfileCard'
+import { CounterSchema } from '@/entities/Counter'
+import { UserSchema } from '@/entities/User'
+import { LoginSchema } from '@/features/AuthByUsername'
+import { ArticleDetailsSchema } from '@/entities/Article'
+import { AddCommentFormSchema } from '@/features/AddCommentForm'
+import { ArticlesPageSchema } from '@/pages/ArticlesPage'
+import { ScrollSavingSchema } from '@/features/ScrollSaving'
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage'
+import { rtkApi } from '@/shared/api/rtkApi'
+import { ProfileSchema } from '@/features/EditableProfileCard'
 import { createReduxStore } from './store'
 
 export interface StateSchema {

@@ -23,7 +23,7 @@
   position: absolute;
   background-color: var(--inverted-primary-color);
   border-radius: 8px;
-  z-index: 11;
+  z-index: var(--popup-z-index);
   border: 2px solid var(--primary-color);
   display: flex;
   flex-direction: column;

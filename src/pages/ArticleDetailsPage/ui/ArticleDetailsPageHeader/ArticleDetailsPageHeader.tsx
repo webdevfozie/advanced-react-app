@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { classNames } from 'shared/lib/classNames/classNames'
 import { memo } from 'react'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
-import { Button } from 'shared/ui/Button/Button'
-import { AppLink } from 'shared/ui/AppLink/AppLink'
 import { useSelector } from 'react-redux'
-import { HStack } from 'shared/ui/Stack'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
+import { Button } from '@/shared/ui/Button/Button'
+import { AppLink } from '@/shared/ui/AppLink/AppLink'
+import { HStack } from '@/shared/ui/Stack'
 import { getCanEditArticle } from '../../model/selectors/article'
 
 interface ArticleDetailsPageHeaderProps {

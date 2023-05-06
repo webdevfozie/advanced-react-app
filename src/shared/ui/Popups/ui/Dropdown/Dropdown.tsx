@@ -1,6 +1,6 @@
 import { Menu } from '@headlessui/react'
-import { classNames } from 'shared/lib/classNames/classNames'
 import { Fragment, ReactNode } from 'react'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '../../../AppLink/AppLink'
 import popupCls from '../../styles/popup.module.scss'
 import { Direction } from '../../../../types/ui'
