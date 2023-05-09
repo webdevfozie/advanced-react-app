@@ -10,6 +10,7 @@ import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetails
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import cls from './ArticleDetailsPage.module.scss'
 import { articleDetailsPageReducer } from '../../model/slice'
+import { ArticleRating } from '@/features/ArticleRating'
 
 interface ArticleDetailsPageProps {
   className?: string,
@@ -26,12 +27,17 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   const { id } = useParams<{id: string}>()
 
+  if (!id) {
+    return null
+  }
+
   return (
     <DynamicModuleLoader reducers={reducers}>
       <Page className={classNames(cls.articleDetailsPage, {}, [className])}>
         <VStack max gap={16}>
           <ArticleDetailsPageHeader id={id} />
           <ArticleDetails id={id} />
+          <ArticleRating id={id} />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>

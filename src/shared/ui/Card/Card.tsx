@@ -4,19 +4,23 @@ import cls from './Card.module.scss'
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   className?: string,
-  children: ReactNode
+  children: ReactNode,
+  fullWidth?: boolean
 }
 
 export const Card = (props: CardProps) => {
   const {
     className,
     children,
+    fullWidth = false,
     ...otherProps
   } = props
 
   return (
     <div
-      className={classNames(cls.card, {}, [className])}
+      className={classNames(cls.card, {
+        [cls.fullWidth]: fullWidth,
+      }, [className])}
       {...otherProps}
     >
       {children}
