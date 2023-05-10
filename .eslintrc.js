@@ -86,7 +86,9 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'arrow-body-style': 'off',
-    'fsd-imports-23/path-checker': 'error',
+    'fsd-imports-23/path-checker': ['error', {
+      alias: '@',
+    }],
   },
   globals: {
     __IS_DEV__: true,

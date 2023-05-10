@@ -3,7 +3,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import withMock from 'storybook-addon-mock'
 import { NotificationList } from './NotificationList'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
-import { WithoutRate } from '@/features/ArticleRating/ui/ArticleRating/ArticleRating.stories'
 
 export default {
   title: 'entities/Notification/NotificationList',

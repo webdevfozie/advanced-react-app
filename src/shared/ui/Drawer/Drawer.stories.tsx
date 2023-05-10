@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Drawer } from './Drawer'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '../Text/Text'
 
 export default {
   title: 'shared/Drawer',
