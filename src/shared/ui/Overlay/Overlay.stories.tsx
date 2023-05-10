@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Overlay } from './Overlay'
 
 export default {
-  title: 'slice/Overlay',
+  title: 'shared/Overlay',
   component: Overlay,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -13,4 +13,5 @@ export default {
 const Template: ComponentStory<typeof Overlay> = (args) => <Overlay {...args} />
 
 export const Default = Template.bind({})
-Default.args = {}
+Default.args = {
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { CountrySelect } from './CountrySelect'
+import { Country } from '../../model/consts/consts'
 
 export default {
   title: 'entities/CountrySelect',
@@ -17,4 +18,5 @@ const Template: ComponentStory<typeof CountrySelect> = (args) => <CountrySelect 
 
 export const Primary = Template.bind({})
 Primary.args = {
+  value: Country.Belarus,
 }
