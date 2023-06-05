@@ -89,6 +89,10 @@ module.exports = {
     'fsd-imports-23/path-checker': ['error', {
       alias: '@',
     }],
+    'fsd-imports-23/public-api-imports': ['error', {
+      alias: '@',
+      testFiles: ['**/*.test.ts', '**/*.story.ts', '**/StoreDecorator.tsx'],
+    }],
   },
   globals: {
     __IS_DEV__: true,

@@ -1,4 +1,6 @@
-import { ArticleSortField, ArticleType, ArticleView } from './model/consts/consts'
+import {
+  ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
+} from './model/consts/consts'
 import { ArticlesSortSelector } from './ui/ArticlesSortSelector/ArticlesSortSelector'
 import { ArticleViewSwitcher } from './ui/ArticleViewSwitcher/ArticleViewSwitcher'
 import { ArticleList } from './ui/ArticleList/ArticleList'
@@ -14,7 +16,9 @@ export {
   getArticleDetailsData,
   ArticleList,
   ArticlesSortSelector,
-  ArticleViewSwitcher, ArticleView,
+  ArticleViewSwitcher,
+  ArticleView,
+  ArticleBlockType,
   ArticleSortField,
   ArticleType,
 }
