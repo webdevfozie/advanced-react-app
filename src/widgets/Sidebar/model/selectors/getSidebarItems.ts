@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit'
 import { getUserAuthData } from '@/entities/User'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { SidebarItemType } from '../types/sidebar'
+import { RoutePath } from '@/shared/const/router'
 
 export const getSidebarItems = createSelector(
   getUserAuthData,

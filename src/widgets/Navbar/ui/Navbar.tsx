@@ -8,13 +8,13 @@ import { getUserAuthData } from '@/entities/User'
 import { Text, TextTheme } from '@/shared/ui/Text/Text'
 import { Icon } from '@/shared/ui/Icon/Icon'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
-import { AppRoutes, RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { HStack } from '@/shared/ui/Stack'
 import { NotificationButton } from '@/features/NotificationButton'
 import { AvatarDropdown } from '@/features/AvatarDropdown'
 import { Drawer } from '@/shared/ui/Drawer/Drawer'
 import { NotificationList } from '@/entities/Notification'
 import cls from './Navbar.module.scss'
+import { AppRoutes, RoutePath } from '@/shared/const/router'
 
 interface NavbarProps {
   className?: string,
