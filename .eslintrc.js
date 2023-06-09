@@ -93,6 +93,10 @@ module.exports = {
       alias: '@',
       testFiles: ['**/*.test.ts', '**/*.story.ts', '**/StoreDecorator.tsx'],
     }],
+    'fsd-imports-23/layer-imports': ['error', {
+      alias: '@',
+      ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+    }],
   },
   globals: {
     __IS_DEV__: true,
