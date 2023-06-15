@@ -23,6 +23,7 @@ module.exports = {
     'i18next',
     'react-hooks',
     'fsd-imports-23',
+    'unused-imports',
   ],
   settings: {
     'import/resolver': {
@@ -97,6 +98,7 @@ module.exports = {
       alias: '@',
       ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
     }],
+    'unused-imports/no-unused-imports': 'error',
   },
   globals: {
     __IS_DEV__: true,
