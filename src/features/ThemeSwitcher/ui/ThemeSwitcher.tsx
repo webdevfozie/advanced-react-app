@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
-import { Icon, IconSize } from '@/shared/ui/Icon/Icon'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { Icon, IconSize } from '@/shared/ui/Icon'
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
 
 import { Theme } from '@/shared/const/theme'

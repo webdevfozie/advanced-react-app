@@ -1,8 +1,8 @@
 import { memo } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { Text, TextSize } from '@/shared/ui/Text'
 import { VStack } from '@/shared/ui/Stack'
-import { AppLink } from '@/shared/ui/AppLink/AppLink'
+import { AppLink } from '@/shared/ui/AppLink'
 import { Notification } from '../../model/types/notifications'
 
 interface NotificationItemProps {

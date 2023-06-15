@@ -1,6 +1,6 @@
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Icon } from '@/shared/ui/Icon/Icon'
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button'
+import { Icon } from '@/shared/ui/Icon'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
 import { ArticleView } from '../../model/consts/consts'
 import cls from './ArticleViewSwitcher.module.scss'
 

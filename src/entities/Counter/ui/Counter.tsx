@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
-import { Button } from '@/shared/ui/Button/Button'
-import { Icon } from '@/shared/ui/Icon/Icon'
+import { Button } from '@/shared/ui/Button'
+import { Icon } from '@/shared/ui/Icon'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { counterActions } from '../model/slice/CounterSlice'
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue'
