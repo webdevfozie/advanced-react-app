@@ -7,24 +7,24 @@ import cls from './ListBox.module.scss'
 import popupCls from '../../styles/popup.module.scss'
 import { Direction } from '../../../../types/ui'
 
-interface ListBoxItem {
-  value: string,
+interface ListBoxItem<T extends string> {
+  value: T,
   content: ReactNode,
   disabled?: boolean
 }
 
-interface ListBoxProps {
-  items?: ListBoxItem[],
+interface ListBoxProps<T extends string> {
+  items?: ListBoxItem<T>[],
   className?: string,
-  value?: string,
+  value?: T,
   defaultValue?: string,
   label?: string,
-  onChange: <T extends string>(value: T) => void,
+  onChange: (value: T) => void,
   readonly?: boolean,
   direction?: Direction
 }
 
-export function ListBox(props: ListBoxProps) {
+export function ListBox<T extends string>(props: ListBoxProps<T>) {
   const {
     className,
     items,
@@ -59,7 +59,7 @@ export function ListBox(props: ListBoxProps) {
           {items?.map((item) => (
             <HListBox.Option
               key={item.value}
-              value={item.value}
+              value={item.value as T}
               disabled={item.disabled}
               as={Fragment}
             >

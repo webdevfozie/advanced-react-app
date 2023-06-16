@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { useCallback, useMemo } from 'react'
+import { useMemo } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { SortOrder } from '@/shared/types'
 import { ListBox } from '@/shared/ui/Popups'
@@ -25,7 +25,12 @@ export const ArticlesSortSelector = (props: ArticlesSortSelectorProps) => {
 
   const { t } = useTranslation()
 
-  const orderOptions = useMemo(() => [
+  interface ArticleOrderItem {
+    value: SortOrder,
+    content: string
+  }
+
+  const orderOptions = useMemo<ArticleOrderItem[]>(() => [
     {
       value: 'asc',
       content: t('возрастанию'),
@@ -51,27 +56,19 @@ export const ArticlesSortSelector = (props: ArticlesSortSelectorProps) => {
     },
   ], [t])
 
-  const changeSortHandler = useCallback((newSort: string) => {
-    onChangeSort(newSort as ArticleSortField)
-  }, [onChangeSort])
-
-  const changeOrderHandler = useCallback((newOrder: string) => {
-    onChangeOrder(newOrder as SortOrder)
-  }, [onChangeOrder])
-
   return (
     <div className={classNames(cls.articlesSortSelector, {}, [className])}>
       <ListBox
         items={orderOptions}
         label={t('Отсортировать по')}
         value={order}
-        onChange={changeOrderHandler}
+        onChange={onChangeOrder}
       />
       <ListBox
         items={sortFieldOptions}
         label={t('по')}
         value={sort}
-        onChange={changeSortHandler}
+        onChange={onChangeSort}
       />
     </div>
   )
