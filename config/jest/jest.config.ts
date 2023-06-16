@@ -41,6 +41,7 @@ export default {
     '\\.s?css$': 'identity-obj-proxy',
     '^src/(.*)$': '<rootDir>/$1',
     axios: 'axios/dist/node/axios.cjs',
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   reporters: [
     'default',
