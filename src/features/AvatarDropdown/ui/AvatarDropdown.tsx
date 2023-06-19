@@ -8,7 +8,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import {
   isUserAdmin, isUserManager, User, userActions,
 } from '@/entities/User'
-import { AppRoutes, RoutePath } from '@/shared/const/router'
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router'
 
 interface AvatarDropdownProps {
   className?: string,
@@ -39,7 +39,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
         ...(isAdminPanelAvailable
           ? [{
             content: t('Админ'),
-            href: RoutePath[AppRoutes.ADMIN_PANEL],
+            href: getRouteAdminPanel(),
           }]
           : []
         ),
@@ -49,7 +49,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
         },
         {
           content: t('Профиль'),
-          href: RoutePath.profile + authData.id,
+          href: getRouteProfile(authData.id),
         },
       ]}
       trigger={<Avatar size={35} src={authData.avatar} />}

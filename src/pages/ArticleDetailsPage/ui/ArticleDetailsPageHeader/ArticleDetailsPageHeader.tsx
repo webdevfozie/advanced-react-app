@@ -6,7 +6,7 @@ import { Button } from '@/shared/ui/Button'
 import { AppLink } from '@/shared/ui/AppLink'
 import { HStack } from '@/shared/ui/Stack'
 import { getCanEditArticle } from '../../model/selectors/article'
-import { RoutePath } from '@/shared/const/router'
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router'
 
 interface ArticleDetailsPageHeaderProps {
   className?: string,
@@ -24,12 +24,12 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
 
   return (
     <HStack gap={16} max justify="between" className={classNames('', {}, [className])}>
-      <AppLink to={RoutePath.articles}>
+      <AppLink to={getRouteArticles()}>
         <Button>{t('Назад к списку')}</Button>
       </AppLink>
       {(canEdit && id) && (
         <AppLink
-          to={`${RoutePath['article-details']}${id}/edit`}
+          to={getRouteArticleEdit(id)}
         >
           <Button>{t('Редактировать')}</Button>
         </AppLink>

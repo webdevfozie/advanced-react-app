@@ -13,7 +13,7 @@ import cls from './ArticleListItem.module.scss'
 import {
   Article, ArticleTextBlock,
 } from '../../model/types/article'
-import { RoutePath } from '@/shared/const/router'
+import { getRouteArticleDetails } from '@/shared/const/router'
 
 interface ArticleListItemProps {
   className?: string
@@ -31,7 +31,7 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
   } = props
   const { t } = useTranslation()
 
-  const articleUrl = RoutePath['article-details'] + article.id
+  const articleUrl = getRouteArticleDetails(article.id)
 
   const types = <Text className={cls.types}>{article.type.join(', ')}</Text>
   const views = (
