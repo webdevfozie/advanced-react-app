@@ -1,15 +1,15 @@
 import { useTranslation } from 'react-i18next'
-import { useCallback, useMemo } from 'react'
+import { useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Input } from '@/shared/ui/Input'
 import {
-  ArticlesSortSelector, ArticleViewSwitcher, ArticleView, ArticleSortField, ArticleType,
+  ArticleViewSwitcher, ArticleView, ArticleType,
 } from '@/entities/Article'
 import { SortOrder } from '@/shared/types'
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
-import { TagItem, Tags } from '@/shared/ui/Tags'
+import { TagItem } from '@/shared/ui/Tags'
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import {
   getArticlesPageOrder, getArticlesPageSearch,
@@ -18,6 +18,8 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import { articlesPageActions } from '../../model/slices/articlesPageSlice'
 import cls from './ArticlesFilters.module.scss'
+import { ArticleTypeTags } from '@/features/ArticleTypeTags'
+import { ArticleSortField, ArticlesSortSelector } from '@/features/ArticlesSortSelector'
 
 interface ArticlesFiltersProps {
   className?: string,
@@ -72,25 +74,6 @@ export const ArticlesFilters = (props: ArticlesFiltersProps) => {
     fetchData()
   }, [dispatch, fetchData])
 
-  const typeTags = useMemo<TagItem[]>(() => [
-    {
-      value: ArticleType.ALL,
-      content: t('Все статьи'),
-    },
-    {
-      value: ArticleType.ECONOMICS,
-      content: t('Экономика'),
-    },
-    {
-      value: ArticleType.IT,
-      content: t('IT'),
-    },
-    {
-      value: ArticleType.SCIENCE,
-      content: t('Наука'),
-    },
-  ], [t])
-
   return (
     <div className={classNames(cls.articlesFilters, {}, [className])}>
       <div className={cls.sortWrapper}>
@@ -112,10 +95,9 @@ export const ArticlesFilters = (props: ArticlesFiltersProps) => {
         onChange={onChangeSearch}
         className={cls.search}
       />
-      <Tags
-        tags={typeTags}
-        value={type}
-        onTagClick={onChangeType}
+      <ArticleTypeTags
+        type={type}
+        onChangeType={onChangeType}
       />
     </div>
   )

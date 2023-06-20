@@ -1,7 +1,6 @@
 import {
-  ArticleBlockType, ArticleSortField, ArticleType, ArticleView,
+  ArticleBlockType, ArticleView,
 } from './model/consts/consts'
-import { ArticlesSortSelector } from './ui/ArticlesSortSelector/ArticlesSortSelector'
 import { ArticleViewSwitcher } from './ui/ArticleViewSwitcher/ArticleViewSwitcher'
 import { ArticleList } from './ui/ArticleList/ArticleList'
 import { ArticleDetails } from './ui/ArticleDetails/ArticleDetails'
@@ -15,15 +14,13 @@ export {
   ArticleDetails,
   getArticleDetailsData,
   ArticleList,
-  ArticlesSortSelector,
   ArticleViewSwitcher,
   ArticleView,
   ArticleBlockType,
-  ArticleSortField,
-  ArticleType,
 }
 
 export type {
   Article,
   ArticleDetailsSchema,
 }
+export { ArticleType } from '@/entities/Article/model/consts/consts'
