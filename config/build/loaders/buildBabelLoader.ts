@@ -7,6 +7,7 @@ interface BuildBabelLoaderOptions extends BuildOptions {
 
 export const buildBabelLoader = (options: BuildBabelLoaderOptions) => {
   const { isDev, isTsx } = options
+  const isProd = !isDev
 
   return {
     test: isTsx ? /\.(jsx|tsx)$/ : /\.(js|ts)$/,
@@ -15,6 +16,7 @@ export const buildBabelLoader = (options: BuildBabelLoaderOptions) => {
       loader: 'babel-loader',
       options: {
         presets: ['@babel/preset-env'],
+        cacheDirectory: true,
         plugins: [
           isDev && require.resolve('react-refresh/babel'),
           [
@@ -24,7 +26,7 @@ export const buildBabelLoader = (options: BuildBabelLoaderOptions) => {
             },
           ],
           '@babel/plugin-transform-runtime',
-          isTsx && [
+          (isTsx && isProd) && [
             babelRemovePropsPlugin,
             {
               props: ['data-testid'],
